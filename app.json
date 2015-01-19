@@ -1,0 +1,21 @@
+{
+  "name": "hspd bootstrap",
+  "description": "A client for hspd using bootstrap",
+  "keywords": [
+    "bootstrap",
+    "bouzuya",
+    "hspd",
+    "hubot-scripts",
+    "hubot"
+  ],
+  "website": "https://github.com/bouzuya/hspd-bootstrap",
+  "repository": "https://github.com/bouzuya/hspd-bootstrap",
+  "env": {
+    "NPM_CONFIG_PRODUCTION": {
+      "description": "always false",
+      "value": "false"
+    }
+  },
+  "addons": []
+}
+
