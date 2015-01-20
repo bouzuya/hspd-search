@@ -22,6 +22,9 @@
     },
     "jquery/jquery.d.ts": {
       "commit": "494b30d2327ab489fa5b5f082a3c9a299e4c5644"
+    },
+    "es6-promise/es6-promise.d.ts": {
+      "commit": "0bf824eb633122fb748e17f89aa067cc4383c2df"
     }
   }
 }
