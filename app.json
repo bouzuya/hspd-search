@@ -1,15 +1,14 @@
 {
-  "name": "hspd bootstrap",
-  "description": "A client for hspd using bootstrap",
+  "name": "hspd search",
+  "description": "A client to search the hspd",
   "keywords": [
-    "bootstrap",
     "bouzuya",
     "hspd",
     "hubot-scripts",
     "hubot"
   ],
-  "website": "https://github.com/bouzuya/hspd-bootstrap",
-  "repository": "https://github.com/bouzuya/hspd-bootstrap",
+  "website": "https://github.com/bouzuya/hspd-search",
+  "repository": "https://github.com/bouzuya/hspd-search",
   "env": {
     "NPM_CONFIG_PRODUCTION": {
       "description": "always false",
@@ -18,4 +17,3 @@
   },
   "addons": []
 }
-
