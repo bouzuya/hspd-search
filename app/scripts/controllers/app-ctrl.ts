@@ -1,21 +1,27 @@
 /// <reference path="../../../typings/angularjs/angular.d.ts" />
 
+import services = require('../services/hubot-script-service');
+
 export class AppCtrl {
   static $inject = [
-    '$http'
+    '$scope',
+    'HubotScriptService'
   ];
 
   loaded: boolean;
   scripts: Array<{}>;
 
-  constructor($http: ng.IHttpService) {
+  constructor(
+    $scope : ng.IScope,
+    HubotScriptService : services.HubotScriptService
+  ) {
     this.loaded = false;
     this.scripts = [];
 
-    var url = 'https://hspd-api.herokuapp.com/hubot_scripts';
-    $http.get<Array<{}>>(url).then((res) => {
+    HubotScriptService.findAll().then((scripts) => {
       this.loaded = true;
-      this.scripts = res.data;
+      this.scripts = scripts;
+      $scope.$apply();
     });
   }
 }
