@@ -21,7 +21,6 @@ class AppController {
     HubotScriptService.findAll().then((scripts) => {
       this.loaded = true;
       this.scripts = scripts;
-      $scope.$apply();
     });
   }
 }
