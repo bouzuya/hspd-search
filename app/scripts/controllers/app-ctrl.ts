@@ -1,8 +1,8 @@
 /// <reference path="../../../typings/angularjs/angular.d.ts" />
 
-import services = require('../services/hubot-script-service');
+import HubotScriptService = require('../services/hubot-script-service');
 
-export class AppCtrl {
+class AppCtrl {
   static $inject = [
     '$scope',
     'HubotScriptService'
@@ -13,7 +13,7 @@ export class AppCtrl {
 
   constructor(
     $scope : ng.IScope,
-    HubotScriptService : services.HubotScriptService
+    HubotScriptService : HubotScriptService
   ) {
     this.loaded = false;
     this.scripts = [];
@@ -25,3 +25,5 @@ export class AppCtrl {
     });
   }
 }
+
+export = AppCtrl;

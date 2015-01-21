@@ -1,9 +1,9 @@
 /// <reference path="../../typings/angularjs/angular.d.ts" />
 
-import controllers = require('./controllers/index');
-import services = require('./services/index');
+import AppCtrl = require('./controllers/app-ctrl');
+import HubotScriptService = require('./services/hubot-script-service');
 
 angular
 .module('app', [])
-.service('HubotScriptService', services.HubotScriptService)
-.controller('AppCtrl', controllers.AppCtrl);
+.service('HubotScriptService', HubotScriptService)
+.controller('AppCtrl', AppCtrl);
