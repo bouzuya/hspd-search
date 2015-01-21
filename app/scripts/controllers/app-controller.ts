@@ -2,7 +2,7 @@
 
 import HubotScriptService = require('../services/hubot-script-service');
 
-class AppCtrl {
+class AppController {
   static $inject = [
     '$scope',
     'HubotScriptService'
@@ -26,4 +26,4 @@ class AppCtrl {
   }
 }
 
-export = AppCtrl;
+export = AppController;
