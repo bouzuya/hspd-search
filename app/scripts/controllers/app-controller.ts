@@ -9,6 +9,7 @@ class AppController {
   ];
 
   loaded: boolean;
+  query: string;
   scripts: Array<{}>;
 
   constructor(
