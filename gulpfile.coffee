@@ -19,6 +19,7 @@ typescriptProject = typescript.createProject
   declarationFiles: true
   # noExternalResolve: true
   target: 'ES5'
+  module: 'commonjs'
 
 gulp.task 'build', (done) ->
   run = require 'run-sequence'
