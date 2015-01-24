@@ -14,7 +14,23 @@
     <h1>hspd : hubot script per day</h1>
     <div class="loader" ng-class="{loading: !c.loaded}">loading...</div>
     <div class="body" ng-class="{loaded: c.loaded}">
-      <p><input type="search" class="query" ng-model="c.query" placeholder="input search query here. e.g. hubot-t_wada" /></p>
+      <p>
+        <input
+          class="query"
+          ng-model="c.query"
+          placeholder="input search query here. e.g. hubot-t_wada"
+          type="search"
+          />
+        <span class="search-result">
+          <span class="search-result-prefix">result:</span>
+          <span
+            class="search-result-count"
+            ng-bind="(c.scripts | filter: c.query).length">
+            0
+          </span>
+          <span class="search-result-unit">script</span>
+        </span>
+      </p>
       <p class="summary"><span class="count" ng-bind="c.scripts.length"></span> scripts <span class="count" ng-bind="c.scripts.length"></span> days </p>
       <ul class="scripts">
         <li class="script-container" ng-repeat="i in c.scripts | filter: c.query | orderBy:'number' | limitTo: c.limit">
