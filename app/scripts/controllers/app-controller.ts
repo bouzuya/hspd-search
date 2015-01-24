@@ -19,7 +19,7 @@ class AppController {
   ) {
     this.loaded = false;
     this.scripts = [];
-    this.limit = 4;
+    this.limit = 10;
 
     HubotScriptService.findAll().then((scripts) => {
       this.loaded = true;
