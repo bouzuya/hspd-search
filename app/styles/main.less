@@ -245,4 +245,40 @@
       }
     }
   }
+
+  .more-button-container {
+    @script-height: 50%;
+    @script-border-color: #333;
+    @script-border-width: 2px;
+
+    .make-xs-column(12);
+    .make-sm-column(6);
+    .make-md-column(6);
+    .make-lg-column(4);
+
+    position: relative;
+
+    &:before {
+      content: "";
+      display: block;
+      padding-top: @script-height;
+    }
+
+    .more-button {
+      position: absolute;
+      top: 2%;
+      left: 2%;
+      width: 96%;
+      height: 96%;
+    }
+
+    .more-button {
+      font-size: 120%;
+      color: @script-border-color;
+      background-color: #fff;
+      border: @script-border-width solid @script-border-color;
+      border-radius: 8px;
+      box-shadow: 0 2px #ddd;
+    }
+  }
 }
