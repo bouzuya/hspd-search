@@ -63,13 +63,6 @@
   }
 }
 
-.body {
-  display: none;
-  &.loaded {
-    display: block;
-  }
-}
-
 .app-container {
   width: 100%;
   // .container-fixed();
@@ -84,13 +77,28 @@
     text-align: center;
   }
 
+  .body {
+    display: none;
+    &.loaded {
+      display: block;
+    }
+  }
+
   .summary {
     text-align: right;
     margin-right: 8px;
   }
 
-  .query {
-    .form-control();
+  .search {
+    margin: 0 auto 16px auto;
+    width: 50%;
+    min-width: 320px;
+
+    .query {
+      .form-control();
+      border: #333 solid 2px;
+      border-radius: 8px;
+    }
   }
 
   .scripts {

@@ -14,7 +14,8 @@
     <h1>hspd : hubot script per day</h1>
     <div class="loader" ng-class="{loading: !c.loaded}">loading...</div>
     <div class="body" ng-class="{loaded: c.loaded}">
-      <p>
+      <p class="summary"><span class="count" ng-bind="c.scripts.length"></span> scripts <span class="count" ng-bind="c.scripts.length"></span> days </p>
+      <p class="search">
         <input
           class="query"
           ng-model="c.query"
@@ -31,7 +32,6 @@
           <span class="search-result-unit">script</span>
         </span>
       </p>
-      <p class="summary"><span class="count" ng-bind="c.scripts.length"></span> scripts <span class="count" ng-bind="c.scripts.length"></span> days </p>
       <ul class="scripts">
         <li class="script-container" ng-repeat="i in c.scripts | filter: c.query | orderBy:'number' | limitTo: c.limit">
           <div class="script">
