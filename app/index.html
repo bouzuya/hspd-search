@@ -17,7 +17,7 @@
       <p><input type="search" class="query" ng-model="c.query" placeholder="input search query here. e.g. hubot-t_wada" /></p>
       <p class="summary"><span class="count" ng-bind="c.scripts.length"></span> scripts <span class="count" ng-bind="c.scripts.length"></span> days </p>
       <ul class="scripts">
-        <li class="script-container" ng-repeat="i in c.scripts | filter: c.query | orderBy:'number'">
+        <li class="script-container" ng-repeat="i in c.scripts | filter: c.query | orderBy:'number' | limitTo: c.limit">
           <div class="script">
             <div class="image-container">
               <div class="image">
@@ -44,6 +44,9 @@
               </div>
             </div>
           </div>
+        </li>
+        <li class="more-button-container" ng-if="c.limit < (c.scripts | filter: c.query).length">
+          <button class="more-button" ng-click="c.more()">more...</button>
         </li>
       </ul>
     </div>
