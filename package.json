@@ -55,5 +55,8 @@
     "start": "node server.js",
     "test": "gulp test",
     "watch": "gulp watch"
+  },
+  "engines": {
+    "node": "0.10.x"
   }
 }
